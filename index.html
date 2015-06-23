@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Asteroids</title>
+  </head>
+
+  <body>
+    <canvas></canvas>
+
+    <script type="application/javascript" src="lib/game.js"></script>
+    <!-- <script type="application/javascript" src="lib/gameView.js"></script> -->
+
+    <script type="application/javascript">
+      (function () {
+        var canvasEl = document.getElementsByTagName("canvas")[0];
+        canvasEl.width = Breakout.Game.DIM_X;
+        canvasEl.height = Breakout.Game.DIM_Y;
+        var ctx = canvasEl.getContext("2d");
+        var game = new Breakout.Game();
+        // new Breakout.GameView(game, ctx).start();
+      })();
+    </script>
+  </body>
+</html>
