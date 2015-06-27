@@ -19,6 +19,9 @@
         canvasEl.height = Breakout.Game.DIM_Y;
         var ctx = canvasEl.getContext("2d");
         var game = new Breakout.Game();
+        canvasEl.addEventListener('mousemove', function (e) {
+          game.movePaddle(e);
+        });
         new Breakout.GameView(game, ctx).start();
       })();
     </script>
