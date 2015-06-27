@@ -25,6 +25,9 @@
         canvasEl.addEventListener('mousemove', function (e) {
           game.movePaddle(e);
         });
+        canvasEl.addEventListener('click', function (e) {
+          game.mouseClick(e);
+        });
         new Breakout.GameView(game, ctx).start();
       })();
     </script>
